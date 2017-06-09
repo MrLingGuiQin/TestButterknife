@@ -1,0 +1,26 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+        // 1、butterKnife 仓库配置
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.2'
+
+        //  2、配置兼容lib 中使用butterknife
+        classpath 'com.jakewharton:butterknife-gradle-plugin:8.6.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
